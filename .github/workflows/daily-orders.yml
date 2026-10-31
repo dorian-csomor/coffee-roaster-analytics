@@ -1,0 +1,27 @@
+# Simulates yesterday's trading every morning so the dashboard always shows fresh data.
+# Side benefit: the daily activity keeps the free Supabase project from pausing.
+name: Daily sales simulation
+
+on:
+  schedule:
+    - cron: "17 5 * * *"   # 05:17 UTC every day
+  workflow_dispatch:
+
+concurrency:
+  group: database
+  cancel-in-progress: false
+
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Simulate missing days
+        run: python scripts/db.py simulate
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
