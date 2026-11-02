@@ -4,10 +4,13 @@
 
 > Driftwood Peak Coffee Co. is a fictional specialty coffee roaster in Portland, Oregon. It sells through an online shop, its own café, monthly subscriptions and wholesale accounts with local cafés. All data is simulated, but it behaves like a real business: holiday peaks, weekend café rushes, loyal regulars, stock running low and getting restocked.
 
-**🔗 [Live dashboard](#) · 📊 [Dashboard guide](docs/dashboard-guide.md)**
+**🔗 [Open the live dashboard](https://datastudio.google.com/reporting/02a517ba-5fe3-4581-966b-15e2c5b83e41)** · 📊 [How it was built](docs/dashboard-guide.md)
 
-<!-- Replace with a screenshot of your Looker Studio dashboard -->
-<!-- ![Dashboard](docs/dashboard.png) -->
+The dashboard updates every morning with new sales and stock data. No login is needed to view it.
+
+| Sales Overview | Inventory |
+|---|---|
+| [![Sales Overview page](docs/dashboard-sales.png)](https://datastudio.google.com/reporting/02a517ba-5fe3-4581-966b-15e2c5b83e41) | [![Inventory page](docs/dashboard-inventory.png)](https://datastudio.google.com/reporting/02a517ba-5fe3-4581-966b-15e2c5b83e41) |
 
 ---
 

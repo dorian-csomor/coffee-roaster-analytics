@@ -73,4 +73,4 @@ Use the **Customers** data source to show a donut chart of `segment`, a bar char
 - **Theme and layout → Theme**: pick a simple light theme. Warm coffee colours work well here, for example `#6F4E37` and `#C8A27A`, with one accent colour.
 - Add a header with the business name and a "Data refreshed daily" note.
 - **Share → Manage access → Anyone with the link can view**. Put that link in your README and your Upwork portfolio.
-- Take a screenshot, save it as `docs/dashboard.png` and un-comment the image line in the README.
+- Take a screenshot of each page and save them as `docs/dashboard-sales.png` and `docs/dashboard-inventory.png`. The README shows both.
