@@ -66,11 +66,20 @@ erDiagram
 
 ## Ask Claude about the business
 
-With the Supabase connector, Claude can query the database directly (read-only). For example:
+With the Supabase connector, Claude can query the live database directly. It is connected **read-only and limited to this one project**, so it can look but never change anything.
+
+**Example:** *"Which products should I reorder this week, and which wholesale customers haven't ordered in the last 30 days?"*
+
+<p align="center">
+  <img src="docs/claude-demo.png" alt="Claude answering a reorder and customer follow-up question from the live Supabase data" width="600">
+</p>
+
+Claude found the three products below their reorder point, estimated when the fastest seller runs out, and listed the lapsed wholesale accounts ranked by value, so the owner knows who to call first.
+
+More questions to try:
 
 - *"What were our top 5 products by gross profit last quarter?"*
-- *"Which wholesale customers haven't ordered in the last 30 days?"*
-- *"Which products will run out within a week at the current sales rate?"*
+- *"Who are our top 5 customers by lifetime revenue, and are any of them at risk?"*
 - *"Compare this October with last October by channel."*
 
 ---
@@ -112,7 +121,9 @@ alter role bi_reader with login password 'choose-a-strong-password';
 Follow the step-by-step guide in [docs/dashboard-guide.md](docs/dashboard-guide.md).
 
 ### 6. Connect Claude (optional)
-- **Claude app / claude.ai:** go to **Settings → Connectors**, add **Supabase** and sign in.
+- **Claude app / claude.ai:** go to **Settings → Connectors → Add custom connector** and use the URL
+  `https://mcp.supabase.com/mcp?project_ref=YOUR_PROJECT_REF&read_only=true`, then sign in to Supabase when asked.
+  This URL keeps Claude read-only and limited to one project, unlike the generic Supabase connector.
 - **Claude Code:**
   ```bash
   claude mcp add --transport http supabase "https://mcp.supabase.com/mcp?project_ref=YOUR_PROJECT_REF&read_only=true"
