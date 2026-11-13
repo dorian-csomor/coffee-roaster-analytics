@@ -1,5 +1,5 @@
 """
-Business simulator for Driftwood Peak Coffee Co. (a fictional specialty roaster).
+Business simulator for Forest Hills Coffee Roasters (a fictional specialty roaster in Queens, NY).
 
 Generates realistic, internally consistent activity one day at a time:
 new customer signups, orders across four channels, and stock movements
@@ -40,9 +40,9 @@ COFFEES = [
     ("Brazil Cerrado", 1, "Brazil", "Medium-Dark", 14.50, 1.1),
     ("Sumatra Mandheling", 1, "Indonesia", "Dark", 16.00, 0.7),
     ("Costa Rica Tarrazu", 1, "Costa Rica", "Medium", 17.50, 0.8),
-    ("Morning Ridge Blend", 2, None, "Medium", 14.00, 1.9),
-    ("Campfire Blend", 2, None, "Dark", 14.00, 1.2),
-    ("Driftwood House Espresso", 3, None, "Medium-Dark", 15.50, 1.8),
+    ("Morning Commute Blend", 2, None, "Medium", 14.00, 1.9),
+    ("Late Night Blend", 2, None, "Dark", 14.00, 1.2),
+    ("Forest Hills House Espresso", 3, None, "Medium-Dark", 15.50, 1.8),
     ("Velvet Crema Espresso", 3, None, "Dark", 15.50, 1.0),
     ("Colombia Decaf", 4, "Colombia", "Medium", 16.00, 0.6),
 ]
@@ -54,7 +54,7 @@ NON_COFFEE = [
     ("EQ-GRIND", "Hand Burr Grinder", 5, 119.00, 58.00, 0.12, 4, 12),
     ("EQ-KETTLE", "Gooseneck Kettle", 5, 69.00, 31.00, 0.15, 5, 15),
     ("EQ-PRESS", "French Press 1L", 5, 39.00, 15.50, 0.20, 6, 20),
-    ("MR-MUG", "Driftwood Peak Enamel Mug", 6, 16.00, 5.20, 0.30, 12, 40),
+    ("MR-MUG", "Forest Hills Enamel Mug", 6, 16.00, 5.20, 0.30, 12, 40),
     ("MR-TOTE", "Canvas Tote Bag", 6, 18.00, 6.00, 0.15, 8, 30),
     ("MR-GIFT", "Gift Card $50", 6, 50.00, 50.00, 0.10, 20, 50),
 ]
@@ -124,12 +124,14 @@ Lopez Wilson Anderson Thomas Taylor Moore Jackson Martin Lee Perez Thompson Whit
 Clark Ramirez Lewis Robinson Walker Young Allen King Wright Scott Torres Nguyen Hill Flores Green
 Adams Nelson Baker Hall Rivera Campbell Mitchell Carter Roberts Patel Kim Chen Okafor Novak""".split()
 
-# Pacific Northwest roaster: most customers are local, some ship nationwide.
+# Queens-based roaster: most customers are in New York City and New Jersey,
+# some across the tri-state area, a few shipped nationwide.
 CITIES = [
-    ("Portland", "OR", 30), ("Seattle", "WA", 22), ("Eugene", "OR", 8), ("Bend", "OR", 7),
-    ("Tacoma", "WA", 6), ("Spokane", "WA", 4), ("Boise", "ID", 4), ("San Francisco", "CA", 5),
-    ("Los Angeles", "CA", 4), ("Denver", "CO", 3), ("Austin", "TX", 2), ("Chicago", "IL", 2),
-    ("New York", "NY", 2), ("Boston", "MA", 1),
+    ("Queens", "NY", 22), ("Brooklyn", "NY", 18), ("Manhattan", "NY", 16), ("Bronx", "NY", 5),
+    ("Staten Island", "NY", 3), ("Yonkers", "NY", 3), ("Hempstead", "NY", 4), ("White Plains", "NY", 2),
+    ("Jersey City", "NJ", 8), ("Hoboken", "NJ", 6), ("Newark", "NJ", 4), ("Montclair", "NJ", 3),
+    ("North Caldwell", "NJ", 2), ("Stamford", "CT", 3), ("Philadelphia", "PA", 3), ("Boston", "MA", 2),
+    ("Chicago", "IL", 1), ("Los Angeles", "CA", 1), ("Miami", "FL", 1),
 ]
 
 CAFE_WORDS_A = "Blue Copper Little Wild Golden Corner Union Hidden North Maple Harbor Cedar Lantern Fox".split()

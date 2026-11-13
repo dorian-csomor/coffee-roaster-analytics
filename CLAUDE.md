@@ -1,6 +1,6 @@
 # Project notes for Claude
 
-Portfolio project: free analytics stack (Supabase + GitHub Actions + Looker Studio + Claude) for a fictional coffee roaster, Driftwood Peak Coffee Co.
+Portfolio project: free analytics stack (Supabase + GitHub Actions + Looker Studio + Claude) for a fictional coffee roaster, Forest Hills Coffee Roasters (Forest Hills, Queens, NY). Customers are mainly in NYC and New Jersey.
 
 - Schema changes go in a **new** file in `supabase/migrations/` (`YYYYMMDDHHMMSS_description.sql`). Never edit a migration that has already been applied. `scripts/db.py migrate` tracks applied files in `ops.schema_migrations`.
 - Dashboards read only from the `reporting` schema views. New views there are automatically readable by the `bi_reader` role.
