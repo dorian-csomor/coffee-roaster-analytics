@@ -44,7 +44,7 @@ Create a report (**Create → Report**) and add the Sales data source. Add a **d
 | Orders | Scorecard | — | `order_id` (Count Distinct) |
 | Avg Order Value | Scorecard | — | `Avg Order Value` |
 | Gross Profit | Scorecard | — | `gross_profit` (SUM) |
-| Revenue trend | Time series | `order_month` | `revenue` |
+| Revenue trend | Time series | `order_month` (type: Year Month) | `revenue` · filter: include `is_complete_month` = true |
 | Revenue by channel | Donut chart | `channel` | `revenue` |
 | Revenue by category | Bar chart | `category` | `revenue` |
 | Top 10 products | Table with bars | `product_name` | `revenue`, `quantity`, `gross_profit` · rows: 10 |

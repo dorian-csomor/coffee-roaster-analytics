@@ -74,7 +74,7 @@ With the Supabase connector, Claude can query the live database directly. It is 
   <img src="docs/claude-demo.png" alt="Claude answering a reorder and customer follow-up question from the live Supabase data" width="600">
 </p>
 
-Claude found the three products below their reorder point, estimated when the fastest seller runs out, and listed the lapsed wholesale accounts ranked by value, so the owner knows who to call first.
+Claude found the product that needs reordering today, predicted which four will need it within a week at the current sales pace, and flagged wholesale accounts that have gone quiet or never ordered, so the owner knows who to call first.
 
 More questions to try:
 
